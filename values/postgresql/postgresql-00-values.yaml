@@ -1,0 +1,8 @@
+postgresql-ads:
+  enabled: true
+  fullnameOverride: postgresql-ads
+  auth:
+    database: ads
+    existingSecret: ads-postgres-secret
+    secretKeys:
+      adminPasswordKey: adminPasswordKey

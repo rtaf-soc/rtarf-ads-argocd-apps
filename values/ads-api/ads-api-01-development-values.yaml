@@ -1,0 +1,38 @@
+ads-api:
+  pods:
+    replicas: 1
+
+    resources:
+      limits:
+        cpu: 200m
+        memory: 200Mi
+      requests:
+        cpu: 150m
+        memory: 100Mi
+
+    env:
+      # To solve ulimit(128) issue
+      - name: DOTNET_USE_POLLING_FILE_WATCHER
+        value: "true"
+
+      - name: ASPNETCORE_ENVIRONMENT
+        value: "Development"
+
+      - name: IsDev
+        value: "true"
+
+      - name: PostgreSQL__Host
+        value: "postgresql-ads"
+
+      - name: PostgreSQL__Database
+        value: "ads"
+
+      - name: PostgreSQL__User
+        value: "postgres"
+
+      - name: PostgreSQL__Password
+        valueFrom:
+          secretKeyRef:
+            name: ads-postgres-secret
+            key: adminPasswordKey
+            optional: false

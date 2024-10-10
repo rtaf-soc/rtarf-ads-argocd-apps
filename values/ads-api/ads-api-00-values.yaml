@@ -1,0 +1,24 @@
+
+ads-api:
+  enabled: true
+  nameOverride: ads-api
+
+  ingress:
+    enabled: false
+
+  podDisruptionBudget:
+    enabled: false
+
+  pods:
+    controller: deployment
+
+    image:
+      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-api
+
+  service:
+    enabled: true
+    ports:
+      - port: 80
+        targetPort: 8080
+        protocol: TCP
+        name: http
