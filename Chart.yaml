@@ -1,0 +1,24 @@
+apiVersion: v2
+name: helm-erp
+description: A Helm chart for ADS
+
+type: application
+
+version: 1.0.0
+
+appVersion: "1.0"
+
+dependencies:
+  ### pgSQL ###
+  - name: "postgresql"
+    alias: postgresql-ads
+    condition: postgresql-ads.enabled
+    repository: "https://charts.bitnami.com/bitnami"
+    version: "15.2.9"
+
+  ### ads-api ###
+  - name: "generic-app"
+    alias: ads-api
+    condition: ads-api.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"

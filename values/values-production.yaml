@@ -1,0 +1,4 @@
+---
+envAlias: prod
+domainAPI: ads-api.rtarf-prod.its-software-services.com
+domainWeb: ads.rtarf-prod.its-software-services.com
