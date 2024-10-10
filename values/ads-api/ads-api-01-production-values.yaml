@@ -22,10 +22,10 @@ ads-api:
         value: "false"
 
       - name: PostgreSQL__Host
-        value: "postgresql-please-scan"
+        value: "postgresql-ads"
 
       - name: PostgreSQL__Database
-        value: "please-scan"
+        value: "ads"
 
       - name: PostgreSQL__User
         value: "postgres"
@@ -33,6 +33,6 @@ ads-api:
       - name: PostgreSQL__Password
         valueFrom:
           secretKeyRef:
-            name: please-scan-postgres-secret
+            name: ads-postgres-secret
             key: adminPasswordKey
             optional: false
