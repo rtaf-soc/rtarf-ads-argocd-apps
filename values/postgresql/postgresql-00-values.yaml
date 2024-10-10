@@ -2,7 +2,7 @@ postgresql-ads:
   enabled: true
   fullnameOverride: postgresql-ads
   auth:
-    database: please-scan
-    existingSecret: please-scan-postgres-secret
+    database: ads
+    existingSecret: ads-postgres-secret
     secretKeys:
       adminPasswordKey: adminPasswordKey
