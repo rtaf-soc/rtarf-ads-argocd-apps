@@ -41,7 +41,7 @@ ads-api:
         value: ads
 
       - name: Redis__Host
-        value: redis
+        value: redis-master
 
       - name: Redis__Password
         value: internal-notused
