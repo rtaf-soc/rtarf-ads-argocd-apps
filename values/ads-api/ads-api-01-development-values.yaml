@@ -36,3 +36,15 @@ ads-api:
             name: ads-postgres-secret
             key: adminPasswordKey
             optional: false
+
+      - name: Redis__Domain
+        value: ads
+
+      - name: Redis__Host
+        value: redis
+
+      - name: Redis__Password
+        value: internal-notused
+
+      - name: Redis__Port
+        value: "6379"

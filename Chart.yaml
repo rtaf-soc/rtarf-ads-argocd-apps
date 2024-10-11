@@ -22,3 +22,10 @@ dependencies:
     condition: ads-api.enabled
     repository: "https://charts.visonneau.fr/"
     version: "0.0.14"
+
+  ### redis ###
+  - name: "redis"
+    alias: redis
+    condition: redis.enabled
+    repository: "https://charts.bitnami.com/bitnami"
+    version: "18.13.0"
