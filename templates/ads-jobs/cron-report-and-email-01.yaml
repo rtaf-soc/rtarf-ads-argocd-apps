@@ -1,10 +1,10 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: blacklist-cache-sync-cron
+  name: blacklist-cache-loader
 spec:
-  # kubectl create job --from=cronjob/blacklist-cache-sync-cron blacklist-sync-001 -n ads-dev
-  schedule: "0 2 * * *" # Everyday 2 AM
+  # kubectl create job --from=cronjob/blacklist-cache-loader blacklist-sync-001 -n ads-dev
+  schedule: "*/15 * * * *" # Every 15 minute
   jobTemplate:
     spec:
       ttlSecondsAfterFinished: 3600
