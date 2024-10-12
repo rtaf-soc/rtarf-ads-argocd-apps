@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: blacklist-cache-loader
 spec:
-  # kubectl create job --from=cronjob/blacklist-cache-loader blacklist-sync-001 -n ads-dev
+  # kubectl create job --from=cronjob/blacklist-cache-loader blacklist-loader-001 -n ads-dev
   schedule: "*/15 * * * *" # Every 15 minute
   jobTemplate:
     spec:
