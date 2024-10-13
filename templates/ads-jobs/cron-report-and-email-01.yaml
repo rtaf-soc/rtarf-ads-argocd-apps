@@ -25,6 +25,24 @@ spec:
             - name: ORG_ID
               value: default
 
+            - name: API_AUTHEN_USER
+              valueFrom:
+                secretKeyRef:
+                  name: ads-api-secret
+                  key: API_AUTHEN_USER
+
+            - name: API_AUTHEN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ads-api-secret
+                  key: API_AUTHEN_PASSWORD
+
+            - name: API_ENDPOINT
+              valueFrom:
+                secretKeyRef:
+                  name: ads-api-secret
+                  key: API_ENDPOINT
+
             volumeMounts:
             - name: temp-dir
               mountPath: /data/temp
