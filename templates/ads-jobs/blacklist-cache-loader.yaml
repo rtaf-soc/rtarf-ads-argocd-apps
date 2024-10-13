@@ -22,6 +22,15 @@ spec:
             - name: REDIS_HOST
               value: redis-master
 
+            - name: REDIS_PORT
+              value: "6379"
+
+            - name: REDIS_PASSWORD
+              value: ""
+
+            - name: CACHE_TTL_SEC
+              value: "9000"
+
             - name: ORG_ID
               value: default
 
