@@ -2,4 +2,4 @@
 ads-api:
   pods:
     image:
-      tag: "main-1381801"
+      tag: "develop-db20233"
