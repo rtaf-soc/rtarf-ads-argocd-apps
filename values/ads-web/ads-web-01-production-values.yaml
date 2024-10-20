@@ -11,5 +11,5 @@ ads-web:
         memory: 100Mi
 
     env:
-      - name: DUMMY
-        value: "001"
+      - name: HTTP_PORT
+        value: "3000"
