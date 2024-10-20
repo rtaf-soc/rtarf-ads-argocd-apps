@@ -23,6 +23,13 @@ dependencies:
     repository: "https://charts.visonneau.fr/"
     version: "0.0.14"
 
+  ### ads-web ###
+  - name: "generic-app"
+    alias: ads-web
+    condition: ads-web.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
+
   ### redis ###
   - name: "redis"
     alias: redis

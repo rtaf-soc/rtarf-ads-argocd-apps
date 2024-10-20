@@ -1,0 +1,24 @@
+
+ads-web:
+  enabled: true
+  nameOverride: ads-web
+
+  ingress:
+    enabled: false
+
+  podDisruptionBudget:
+    enabled: false
+
+  pods:
+    controller: deployment
+
+    image:
+      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-web
+
+  service:
+    enabled: true
+    ports:
+      - port: 80
+        targetPort: 8080
+        protocol: TCP
+        name: http
