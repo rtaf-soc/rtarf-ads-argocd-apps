@@ -7,6 +7,12 @@ metadata:
     nginx.org/client-max-body-size: 50m
 spec:
   ingressClassName: nginx
+  {{ if eq .Values.envAlias "prod" }}
+  tls:
+    - hosts:
+      - {{ .Values.domainWeb }}
+      secretName: ads-web-cert
+  {{- end -}}
   rules:
   - host: "{{ .Values.domainWeb }}"
     http:

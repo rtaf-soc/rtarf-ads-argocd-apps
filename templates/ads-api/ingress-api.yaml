@@ -6,6 +6,12 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: 50m
     nginx.org/client-max-body-size: 50m
 spec:
+  {{ if eq .Values.envAlias "prod" }}
+  tls:
+    - hosts:
+      - {{ .Values.domainAPI }}
+      secretName: ads-api-cert
+  {{- end -}}
   ingressClassName: nginx
   rules:
   - host: "{{ .Values.domainAPI }}"
