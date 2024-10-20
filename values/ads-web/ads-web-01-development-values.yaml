@@ -1,0 +1,15 @@
+ads-web:
+  pods:
+    replicas: 1
+
+    resources:
+      limits:
+        cpu: 200m
+        memory: 200Mi
+      requests:
+        cpu: 150m
+        memory: 100Mi
+
+    env:
+      - name: DUMMY
+        value: "001"
