@@ -47,7 +47,7 @@ spec:
                   key: API_AUTHEN_PASSWORD
 
             - name: API_ENDPOINT
-              value: ads-{{ .Values.envAlias }}-ads-api
+              value: http://ads-{{ .Values.envAlias }}-ads-api
               #valueFrom:
               #  secretKeyRef:
               #    name: ads-api-secret
