@@ -47,10 +47,11 @@ spec:
                   key: API_AUTHEN_PASSWORD
 
             - name: API_ENDPOINT
-              valueFrom:
-                secretKeyRef:
-                  name: ads-api-secret
-                  key: API_ENDPOINT
+              value: ads-{{ .Values.envAlias }}-ads-api
+              #valueFrom:
+              #  secretKeyRef:
+              #    name: ads-api-secret
+              #    key: API_ENDPOINT
 
             volumeMounts:
             - name: temp-dir
