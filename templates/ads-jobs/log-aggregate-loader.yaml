@@ -31,23 +31,39 @@ spec:
             - name: AGGR_TYPE_NETWORK
               value: aggr_network_v2
 
-            - name: API_AUTHEN_USER
-              valueFrom:
-                secretKeyRef:
-                  name: ads-api-secret
-                  key: API_AUTHEN_USER
+            #- name: API_AUTHEN_USER
+            #  valueFrom:
+            #    secretKeyRef:
+            #      name: ads-api-secret
+            #      key: API_AUTHEN_USER
 
-            - name: API_AUTHEN_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: ads-api-secret
-                  key: API_AUTHEN_PASSWORD
+            #- name: API_AUTHEN_PASSWORD
+            #  valueFrom:
+            #    secretKeyRef:
+            #      name: ads-api-secret
+            #      key: API_AUTHEN_PASSWORD
 
-            - name: API_ENDPOINT
+            #- name: API_ENDPOINT
+            #  valueFrom:
+            #    secretKeyRef:
+            #      name: ads-api-secret
+            #      key: API_ENDPOINT
+
+            - name: PG_HOST
+              value: "postgresql-ads"
+
+            - name: PG_DB
+              value: "ads"
+
+            - name: PG_USER
+              value: "postgres"
+
+            - name: PG_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: ads-api-secret
-                  key: API_ENDPOINT
+                  name: ads-postgres-secret
+                  key: adminPasswordKey
+                  optional: false
 
             volumeMounts:
             - name: temp-dir
