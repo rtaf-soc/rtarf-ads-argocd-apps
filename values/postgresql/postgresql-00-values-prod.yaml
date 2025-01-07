@@ -1,0 +1,17 @@
+postgresql-ads:
+  enabled: true
+  fullnameOverride: postgresql-ads
+  auth:
+    database: ads
+    existingSecret: ads-postgres-secret
+    secretKeys:
+      adminPasswordKey: adminPasswordKey
+
+  primary:
+    resources:
+      requests:
+        cpu: 1
+        memory: 512Mi
+      limits:
+        cpu: 2
+        memory: 1024Mi
