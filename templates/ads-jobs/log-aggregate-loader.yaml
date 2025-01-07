@@ -29,7 +29,7 @@ spec:
               value: "anything-notuse"
 
             - name: AGGR_TYPE_NETWORK
-              value: aggr_network_v2
+              value: aggr_network_v3
 
             #- name: API_AUTHEN_USER
             #  valueFrom:
