@@ -4,7 +4,7 @@ metadata:
   name: log-aggregate-loader
 spec:
   # kubectl create job --from=cronjob/log-aggregate-loader log-aggregate-loader-001 -n ads-dev
-  schedule: "0 */6 * * *" # Every 6 hours
+  schedule: "0 */1 * * *" # Every 6 hours
   jobTemplate:
     spec:
       ttlSecondsAfterFinished: 3600
