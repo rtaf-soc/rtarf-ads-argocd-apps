@@ -1,0 +1,24 @@
+
+ads-bn:
+  enabled: true
+  nameOverride: ads-bn
+
+  ingress:
+    enabled: false
+
+  podDisruptionBudget:
+    enabled: false
+
+  pods:
+    controller: deployment
+
+    image:
+      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-bn
+
+  service:
+    enabled: true
+    ports:
+      - port: 80
+        targetPort: 3000
+        protocol: TCP
+        name: http

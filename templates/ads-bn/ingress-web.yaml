@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ads-bn-ing
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+    nginx.org/client-max-body-size: 50m
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+      - {{ .Values.domainBn }}
+      secretName: ads-bn-cert
+  rules:
+  - host: "{{ .Values.domainbn }}"
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        path: "/"
+        backend:
+          service:
+            name: ads-{{ .Values.envAlias }}-ads-bn
+            port:
+              number: 80

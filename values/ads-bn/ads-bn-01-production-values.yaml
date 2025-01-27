@@ -1,0 +1,21 @@
+ads-bn:
+  pods:
+    replicas: 1
+
+    resources:
+      limits:
+        cpu: 300m
+        memory: 350Mi
+      requests:
+        cpu: 150m
+        memory: 100Mi
+
+    env:
+      - name: HTTP_PORT
+        value: "3000"
+
+      - name: URL_GEOIP_ATTACK_MAP
+        value: "https://geoip-map.rtarf-prod.its-software-services.com/"
+
+      - name: URL_MACHINE_STATUS
+        value: "https://uptime-kuma.rtarf-prod.its-software-services.com/dashboard/"

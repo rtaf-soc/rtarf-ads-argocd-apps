@@ -1,0 +1,21 @@
+ads-bn:
+  pods:
+    replicas: 1
+
+    resources:
+      limits:
+        cpu: 200m
+        memory: 200Mi
+      requests:
+        cpu: 150m
+        memory: 100Mi
+
+    env:
+      - name: HTTP_PORT
+        value: "3000"
+
+      - name: URL_GEOIP_ATTACK_MAP
+        value: "https://www.napbiotec.io/"
+
+      - name: URL_MACHINE_STATUS
+        value: "https://aldamex.com/"
