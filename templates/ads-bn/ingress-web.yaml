@@ -12,7 +12,7 @@ spec:
       - {{ .Values.domainBn }}
       secretName: ads-bn-cert
   rules:
-  - host: "{{ .Values.domainbn }}"
+  - host: "{{ .Values.domainBn }}"
     http:
       paths:
       - pathType: ImplementationSpecific
