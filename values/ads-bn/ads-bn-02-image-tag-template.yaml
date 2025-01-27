@@ -1,0 +1,5 @@
+
+ads-bn:
+  pods:
+    image:
+      tag: "<<image-tag>>"

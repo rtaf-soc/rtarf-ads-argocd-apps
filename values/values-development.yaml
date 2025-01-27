@@ -2,3 +2,4 @@
 envAlias: dev
 domainAPI: api-dev.please-scan.com
 domainWeb: scan-dev.please-scan.com
+domainBn: bn-dev.please-scan.com

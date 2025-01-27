@@ -1,5 +1,5 @@
 
-ads-web:
+ads-bn:
   pods:
     image:
       tag: "develop-9312497"
