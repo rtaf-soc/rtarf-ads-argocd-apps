@@ -11,9 +11,6 @@ ads-bn:
         memory: 100Mi
 
     env:
-      - name: HTTP_PORT
-        value: "3000"
-
       - name: URL_GEOIP_ATTACK_MAP
         value: "https://geoip-map.rtarf-prod.its-software-services.com/"
 
