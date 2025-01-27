@@ -19,6 +19,6 @@ ads-bn:
     enabled: true
     ports:
       - port: 80
-        targetPort: 3000
+        targetPort: 8080 #3000
         protocol: TCP
         name: http
