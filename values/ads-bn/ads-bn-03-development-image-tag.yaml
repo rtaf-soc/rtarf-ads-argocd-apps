@@ -2,4 +2,4 @@
 ads-bn:
   pods:
     image:
-      tag: "develop-b9ef47f"
+      tag: "main-3279fd4"
