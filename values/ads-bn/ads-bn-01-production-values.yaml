@@ -11,8 +11,8 @@ ads-bn:
         memory: 100Mi
 
     env:
-      - name: URL_GEOIP_ATTACK_MAP
+      - name: NUXT_URL_GEOIP_ATTACK_MAP
         value: "https://geoip-map.rtarf-prod.its-software-services.com/"
 
-      - name: URL_MACHINE_STATUS
+      - name: NUXT_URL_MACHINE_STATUS
         value: "https://uptime-kuma.rtarf-prod.its-software-services.com/dashboard/"
