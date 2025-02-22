@@ -20,19 +20,19 @@ ads-web:
       - name: NUXT_URL_MACHINE_STATUS
         value: "https://uptime-kuma.rtarf-prod.its-software-services.com/dashboard/"
 
-      - name: IDP_CLIENT_ID
+      - name: NUXT_IDP_CLIENT_ID
         valueFrom:
           secretKeyRef:
             name: idp-secret
             key: IDP_CLIENT_ID
 
-      - name: IDP_CLIENT_SECRET
+      - name: NUXT_IDP_CLIENT_SECRET
         valueFrom:
           secretKeyRef:
             name: idp-secret
             key: IDP_CLIENT_SECRET
 
-      - name: IDP_ENDPOINT
+      - name: NUXT_IDP_ENDPOINT
         valueFrom:
           secretKeyRef:
             name: idp-secret
