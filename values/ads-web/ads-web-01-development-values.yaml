@@ -14,26 +14,32 @@ ads-web:
       - name: HTTP_PORT
         value: "3000"
 
-      - name: NUXT_URL_GEOIP_ATTACK_MAP
+      - name: NUXT_PUBLIC_GEO_IP_URL
         value: "https://www.napbiotec.io/"
 
-      - name: NUXT_URL_MACHINE_STATUS
+      - name: NUXT_PUBLIC_MACHINE_STATUS_URL
         value: "https://aldamex.com/"
 
-      - name: NUXT_IDP_CLIENT_ID
+      - name: NUXT_KEYCLOAK_IDP_CLIENT_ID
         valueFrom:
           secretKeyRef:
             name: idp-secret
             key: IDP_CLIENT_ID
 
-      - name: NUXT_IDP_CLIENT_SECRET
+      - name: NUXT_KEYCLOAK_IDP_CLIENT_SECRET
         valueFrom:
           secretKeyRef:
             name: idp-secret
             key: IDP_CLIENT_SECRET
 
-      - name: NUXT_IDP_ENDPOINT
+      - name: NUXT_KEYCLOAK_IDP_ENDPOINT
         valueFrom:
           secretKeyRef:
             name: idp-secret
             key: IDP_ENDPOINT
+
+      - name: NUXT_API_PATH
+        value: "test123"
+
+      - name: NUXT_PUBLIC_BASE_URL
+        value: "https://api-dev.please-scan.com"
