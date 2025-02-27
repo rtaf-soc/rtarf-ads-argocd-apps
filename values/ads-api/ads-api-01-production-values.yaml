@@ -48,3 +48,9 @@ ads-api:
 
       - name: Redis__Port
         value: "6379"
+
+      - name: SSO__issuer
+        value: "https://keycloak.rtarf-prod.its-software-services.com/auth/realms/rtarf-ads"
+
+      - name: SSO__signedKeyUrl
+        value: "https://keycloak.rtarf-prod.its-software-services.com/realms/rtarf-ads/protocol/openid-connect/certs"
