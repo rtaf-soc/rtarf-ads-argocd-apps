@@ -48,3 +48,9 @@ ads-api:
 
       - name: Redis__Port
         value: "6379"
+
+      - name: SSO__issuer
+        value: "https://keycloak.devops.napbiotec.io/auth/realms/rtarf-ads-dev"
+
+      - name: SSO__signedKeyUrl
+        value: "https://keycloak.devops.napbiotec.io/auth/realms/rtarf-ads-dev/protocol/openid-connect/certs"
