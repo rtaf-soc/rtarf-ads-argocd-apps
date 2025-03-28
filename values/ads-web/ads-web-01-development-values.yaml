@@ -42,72 +42,72 @@ ads-web:
         value: "https://api-dev.please-scan.com"
 
       # Dashboard
-      - name: NUXT_DASHBOARD_URL_01 # Zeek Event Summary
+      - name: NUXT_DASHBOARD_URL01 # Zeek Event Summary
         value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/p/qDKmB5Nl0vw/"
 
-      - name: NUXT_DASHBOARD_URL_02 # Blacklist Summary
+      - name: NUXT_DASHBOARD_URL02 # Blacklist Summary
         value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/p/yYwmEVAgxnJ/"
 
-      - name: NUXT_DASHBOARD_URL_03 # Crowdstrie Summary
+      - name: NUXT_DASHBOARD_URL03 # Crowdstrie Summary
         value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/p/7YKg12bR0Ze/"
 
-      - name: NUXT_DASHBOARD_URL_04 # IoC Summary
+      - name: NUXT_DASHBOARD_URL04 # IoC Summary
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
-      - name: NUXT_DASHBOARD_URL_05 # Zeek Summary (Suricata)
+      - name: NUXT_DASHBOARD_URL05 # Zeek Summary (Suricata)
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
-      - name: NUXT_DASHBOARD_URL_06 # Zeek Summary (Intel)
+      - name: NUXT_DASHBOARD_URL06 # Zeek Summary (Intel)
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
-      - name: NUXT_DASHBOARD_URL_07 # Zeek Summary (HTTP)
+      - name: NUXT_DASHBOARD_URL07 # Zeek Summary (HTTP)
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
-      - name: NUXT_DASHBOARD_URL_08 # Zeek Summary (Files)
+      - name: NUXT_DASHBOARD_URL08 # Zeek Summary (Files)
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
-      - name: NUXT_DASHBOARD_URL_09 # Zeek Summary (SSL)
+      - name: NUXT_DASHBOARD_URL09 # Zeek Summary (SSL)
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
-      - name: NUXT_DASHBOARD_URL_10 # Zeek Summary (DNS)
+      - name: NUXT_DASHBOARD_URL10 # Zeek Summary (DNS)
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
       # Tools
-      - name: NUXT_TOOL_URL_01 # Kibana
+      - name: NUXT_TOOL_URL01 # Kibana
         value: "https://kibana-soc.rtarf-prod.its-software-services.com/"
 
-      - name: NUXT_TOOL_URL_02 # Kafka
+      - name: NUXT_TOOL_URL02 # Kafka
         value: "https://kafka-ui.rtarf-prod.its-software-services.com/"
 
-      - name: NUXT_TOOL_URL_03_1 # Metalog #1
+      - name: NUXT_TOOL_URL031 # Metalog #1
         value: "https://10.141.98.153/"
 
-      - name: NUXT_TOOL_URL_03_2 # Metalog #2
+      - name: NUXT_TOOL_URL032 # Metalog #2
         value: "https://10.141.98.154/"
 
-      - name: NUXT_TOOL_URL_03_3 # Metalog #3
+      - name: NUXT_TOOL_URL033 # Metalog #3
         value: "https://10.141.98.155/"
 
-      - name: NUXT_TOOL_URL_04_1 # Net Approve #1
+      - name: NUXT_TOOL_URL041 # Net Approve #1
         value: "https://10.141.98.156/"
 
-      - name: NUXT_TOOL_URL_04_2 # Net Approve #2
+      - name: NUXT_TOOL_URL042 # Net Approve #2
         value: "https://10.141.98.157/"
 
-      - name: NUXT_TOOL_URL_04_3 # Net Approve #3
+      - name: NUXT_TOOL_URL043 # Net Approve #3
         value: "https://10.141.98.158/"
 
-      - name: NUXT_TOOL_URL_04_4 # Net Approve #4
+      - name: NUXT_TOOL_URL044 # Net Approve #4
         value: "https://10.141.98.159/"
 
-      - name: NUXT_TOOL_URL_05 # GeoIP
+      - name: NUXT_TOOL_URL05 # GeoIP
         value: "https://geoip-map.rtarf-prod.its-software-services.com/"
 
-      - name: NUXT_TOOL_URL_06 # Superset
+      - name: NUXT_TOOL_URL06 # Superset
         value: "https://superset.rtarf-prod.its-software-services.com/"
 
-      - name: NUXT_TOOL_URL_07 # Loki
+      - name: NUXT_TOOL_URL07 # Loki
         value: "https://grafana-loki.rtarf-prod.its-software-services.com/"
 
-      - name: NUXT_TOOL_URL_08 # Prometheus
+      - name: NUXT_TOOL_URL08 # Prometheus
         value: "https://grafana-k8s.rtarf-prod.its-software-services.com/"
