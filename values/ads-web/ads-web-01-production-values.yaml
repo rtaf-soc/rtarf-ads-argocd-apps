@@ -18,8 +18,7 @@ ads-web:
         value: "https://geoip-map.rtarf-prod.its-software-services.com/"
 
       - name: NUXT_PUBLIC_MACHINE_STATUS_URL
-        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/3ac28d3b-ee7e-415f-864e-d5119abbee23/?standalone=true&native_filters_key=DA_GqL-hMbFj0y_bQrEVQGcxeK6zM5LrQXeMRldf41SPqMpEk6QxNSTdsJUUgpB6" 
-        #"https://uptime-kuma.rtarf-prod.its-software-services.com/dashboard/"
+        value: "https://uptime-kuma.rtarf-prod.its-software-services.com/dashboard/"
 
       - name: NUXT_KEYCLOAK_IDP_CLIENT_ID
         valueFrom:
@@ -44,34 +43,34 @@ ads-web:
 
       # Dashboard
       - name: NUXT_PUBLIC_DASHBOARD_URL01 # Zeek Event Summary
-        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/p/qDKmB5Nl0vw/"
+        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/3ac28d3b-ee7e-415f-864e-d5119abbee23/?standalone=true&native_filters_key=DA_GqL-hMbFj0y_bQrEVQGcxeK6zM5LrQXeMRldf41SPqMpEk6QxNSTdsJUUgpB6"
 
       - name: NUXT_PUBLIC_DASHBOARD_URL02 # Blacklist Summary
-        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/p/yYwmEVAgxnJ/"
+        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/5/?native_filters_key=TbqC_XkhFgP0JH8N8S3CQkOUJtz79oMmFvo4o1YRXu8RH7yRke2iFhV8GUHkUbND&standalone=true"
 
       - name: NUXT_PUBLIC_DASHBOARD_URL03 # Crowdstrie Summary
-        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/p/7YKg12bR0Ze/"
+        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/6/?native_filters_key=n1GhYAO0yQD1HzNBi8YWvQ2EFqEDw1sG5A5QQkGrnC2dw0E2tdjO_dEt7x5kd0Vp&standalone=true"
 
       - name: NUXT_PUBLIC_DASHBOARD_URL04 # IoC Summary
-        value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
+        value: ""
 
       - name: NUXT_PUBLIC_DASHBOARD_URL05 # Zeek Summary (Suricata)
-        value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
+        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/7/?native_filters_key=PG_pUYbhwzm-bp2X-kylTUy3nPGemwSpmiz6LANH0cuGGSePRndvhhrF9wDGh4NM&standalone=true"
 
       - name: NUXT_PUBLIC_DASHBOARD_URL06 # Zeek Summary (Intel)
-        value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
+        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/8/?native_filters_key=Cz05iwuJuFZBtLh3ZdGzUg0-WF752Cr1S0dj8q93f8iyWJBktSGRDDuGa-a5JdKb&standalone=true"
 
       - name: NUXT_PUBLIC_DASHBOARD_URL07 # Zeek Summary (HTTP)
-        value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
+        value: ""
 
       - name: NUXT_PUBLIC_DASHBOARD_URL08 # Zeek Summary (Files)
-        value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
+        value: ""
 
       - name: NUXT_PUBLIC_DASHBOARD_URL09 # Zeek Summary (SSL)
-        value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
+        value: ""
 
       - name: NUXT_PUBLIC_DASHBOARD_URL10 # Zeek Summary (DNS)
-        value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
+        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/10/?native_filters_key=_dU8tNsMWBTe3fwk_MegGX6fohwLrFqHqtf9jFWPJslw_kDpJna2XZECkqKVea2O&standalone=true"
 
       # Tools
       - name: NUXT_PUBLIC_TOOL_URL01 # Kibana
