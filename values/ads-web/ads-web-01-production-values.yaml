@@ -63,11 +63,11 @@ ads-web:
       - name: NUXT_PUBLIC_DASHBOARD_URL07 # Zeek Summary (HTTP)
         value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/11/?native_filters_key=dXrJ22FQ3VXyJSsonPMuzfIrqs8PK3JQ7UyqK9bJZymsaZV0dq06DiThxRIoEo49&standalone=true"
 
-      - name: NUXT_PUBLIC_DASHBOARD_URL08 # Zeek Summary (Files)
-        value: ""
+      - name: NUXT_PUBLIC_DASHBOARD_URL08 # Zeek Summary (Kerberos)
+        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/13/?native_filters_key=gfxNmSDOsdUhJ0OmIx9mf1LeCnDIKgtSOIARZwVm1efqgiL0b1vOJykDpfhUZGR9&standalone=true"
 
-      - name: NUXT_PUBLIC_DASHBOARD_URL09 # Zeek Summary (SSL)
-        value: ""
+      - name: NUXT_PUBLIC_DASHBOARD_URL09 # Zeek Summary (Radius)
+        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/12/?native_filters_key=bNhz41aKpIgD_6WEZExiEtPtgI-ri0Dvs1EM2XQohC0OboQb1437ETjVK0UosZOw&standalone=true"
 
       - name: NUXT_PUBLIC_DASHBOARD_URL10 # Zeek Summary (DNS)
         value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/10/?native_filters_key=_dU8tNsMWBTe3fwk_MegGX6fohwLrFqHqtf9jFWPJslw_kDpJna2XZECkqKVea2O&standalone=true"
