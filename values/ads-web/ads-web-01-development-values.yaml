@@ -63,10 +63,10 @@ ads-web:
       - name: NUXT_PUBLIC_DASHBOARD_URL07 # Zeek Summary (HTTP)
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
-      - name: NUXT_PUBLIC_DASHBOARD_URL08 # Zeek Summary (Files)
+      - name: NUXT_PUBLIC_DASHBOARD_URL08 # Zeek Summary (Keberos)
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
-      - name: NUXT_PUBLIC_DASHBOARD_URL09 # Zeek Summary (SSL)
+      - name: NUXT_PUBLIC_DASHBOARD_URL09 # Zeek Summary (Radius)
         value: "https://www.youtube.com/watch?v=_e3LyCL2F0g"
 
       - name: NUXT_PUBLIC_DASHBOARD_URL10 # Zeek Summary (DNS)
