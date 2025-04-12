@@ -2,4 +2,4 @@
 ads-web:
   pods:
     image:
-      tag: "develop-21305e7"
+      tag: "main-e3b8e95"
