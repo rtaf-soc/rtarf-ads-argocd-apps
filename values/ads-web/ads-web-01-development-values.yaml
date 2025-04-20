@@ -41,6 +41,10 @@ ads-web:
       - name: NUXT_API_PATH
         value: "https://api-dev.please-scan.com"
 
+      # Commander
+      - name: NUXT_PUBLIC_COMMANDER_URL01
+        value: "https://will-change-here.com"
+
       # Dashboard
       - name: NUXT_PUBLIC_DASHBOARD_URL01 # Zeek Event Summary
         value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/p/qDKmB5Nl0vw/"
