@@ -2,4 +2,4 @@
 ads-api:
   pods:
     image:
-      tag: "develop-aef022d"
+      tag: "main-618eafe"
