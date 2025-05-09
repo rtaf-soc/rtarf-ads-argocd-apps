@@ -3,7 +3,8 @@ kind: CronJob
 metadata:
   name: thehive-cases-loader
 spec:
-  # kubectl create job --from=cronjob/thehive-cases-loader thehive-cases-loader-001 -n ads-dev
+  # kubectl create job --from=cronjob/thehive-cases-loader thehive-cases-loader-001 -n ads-prod
+  suspend: {{ .Values.theHiveLoaderSuspend }}
   schedule: "0 */1 * * *" # Every 1 hours
   jobTemplate:
     spec:
