@@ -70,7 +70,7 @@ spec:
               value: "10.141.98.47:9000"
 
             - name: HIVE_CASE_COUNT
-              value: "10"
+              value: "3000"
 
             - name: HIVE_USER
               valueFrom:
