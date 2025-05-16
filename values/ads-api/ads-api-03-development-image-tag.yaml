@@ -2,4 +2,4 @@
 ads-api:
   pods:
     image:
-      tag: "develop-22a78bb"
+      tag: "main-cd2560c"
