@@ -18,7 +18,8 @@ ads-web:
         value: "https://geoip-map.rtarf-prod.its-software-services.com/"
 
       - name: NUXT_PUBLIC_MACHINE_STATUS_URL
-        value: "https://uptime-kuma.rtarf-prod.its-software-services.com/dashboard/"
+        value: "https://gatus.rtarf-prod.its-software-services.com/"
+        #value: "https://uptime-kuma.rtarf-prod.its-software-services.com/dashboard/"
 
       - name: NUXT_KEYCLOAK_IDP_CLIENT_ID
         valueFrom:
