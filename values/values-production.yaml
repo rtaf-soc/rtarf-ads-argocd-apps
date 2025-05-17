@@ -5,3 +5,4 @@ domainWeb: mrdjs.rtarf-prod.its-software-services.com
 domainBn: bn.rtarf-prod.its-software-services.com
 theHiveLoaderSuspend: false
 uptimeLoaderSuspend: false
+backupAdsSuspend: false
