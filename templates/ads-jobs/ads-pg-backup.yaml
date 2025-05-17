@@ -42,7 +42,7 @@ spec:
               value: "postgres"
 
             - name: EXTENSION
-              value: "ads-api"
+              value: "ads-api-{{ .Values.envAlias }}"
 
             - name: GOOGLE_APPLICATION_CREDENTIALS
               value: /secrets/gcp-sa.json
