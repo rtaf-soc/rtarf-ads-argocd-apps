@@ -5,3 +5,4 @@ domainWeb: scan-dev.please-scan.com
 domainBn: bn-dev.please-scan.com
 theHiveLoaderSuspend: true
 uptimeLoaderSuspend: true
+backupAdsSuspend: true

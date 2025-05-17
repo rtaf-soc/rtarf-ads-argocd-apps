@@ -1,0 +1,67 @@
+{{ if eq .Values.envAlias "prod" }}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ads-pg-backup
+spec:
+  # kubectl create job --from=cronjob/ads-pg-backup ads-pg-backup-001 -n ads-prod
+  suspend: {{ .Values.backupAdsSuspend }}
+  schedule: "0 */4 * * *" # Every 4 hours
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          containers:
+          - name: cron-script
+            image: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-jobs:{{ .Values.adsJob.imageTag }}
+            imagePullPolicy: IfNotPresent
+            command:
+            - bash
+            args:
+            - /scripts/backup-postgres-db.bash
+            env:
+            - name: PG_HOST
+              value: "postgresql-ads"
+
+            - name: PG_DB
+              value: "ads"
+
+            - name: PG_USER
+              value: "postgres"
+
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ads-postgres-secret
+                  key: adminPasswordKey
+                  optional: false
+
+            - name: BACKUP_NAME_PREFIX
+              value: "postgres"
+
+            - name: EXTENSION
+              value: "ads-api"
+
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /secrets/gcp-sa.json
+
+            volumeMounts:
+            - name: temp-dir
+              mountPath: /data/temp
+
+            - name: secrets
+              readOnly: true
+              mountPath: "/secrets"
+
+          restartPolicy: OnFailure
+
+          volumes:
+          - name: temp-dir
+            emptyDir: {}
+
+          - name: secrets
+            secret:
+              secretName: gcp-sa
+{{- end -}}
