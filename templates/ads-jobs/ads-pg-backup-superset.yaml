@@ -3,10 +3,10 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: ads-pg-backup
+  name: ads-pg-backup-superset
 spec:
-  # kubectl create job --from=cronjob/ads-pg-backup ads-pg-backup-001 -n ads-prod
-  suspend: {{ .Values.backupAdsSuspend }}
+  # kubectl create job --from=cronjob/ads-pg-backup-superset ads-pg-backup-superset-001 -n ads-prod
+  suspend: {{ .Values.backupSupersetSuspend }}
   schedule: "0 */4 * * *" # Every 4 hours
   jobTemplate:
     spec:
@@ -22,30 +22,23 @@ spec:
             args:
             - /scripts/backup-postgres-db.bash
             env:
-            - name: PG_HOST
-              value: "postgresql-ads"
-
-            - name: PG_DB
-              value: "ads"
-
-            - name: PG_USER
-              value: "postgres"
-
-            - name: PG_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: ads-postgres-secret
-                  key: adminPasswordKey
-                  optional: false
-
             - name: BACKUP_NAME_PREFIX
               value: "postgres"
 
             - name: EXTENSION
-              value: "ads-api-{{ .Values.envAlias }}"
+              value: "superset-{{ .Values.envAlias }}"
 
             - name: GOOGLE_APPLICATION_CREDENTIALS
               value: /secrets/gcp-sa.json
+
+            - name: TARGET_NS
+              value: "superset"
+
+            - name: TARGET_POD
+              value: "superset-production-postgresql-0"
+
+            - name: GCS_FOLDER
+              value: "superset-backup"
 
             volumeMounts:
             - name: temp-dir
