@@ -6,3 +6,4 @@ domainBn: bn-dev.please-scan.com
 theHiveLoaderSuspend: true
 uptimeLoaderSuspend: true
 backupAdsSuspend: true
+backupSupersetSuspend: true
