@@ -32,6 +32,9 @@ spec:
             - name: GOOGLE_APPLICATION_CREDENTIALS
               value: /secrets/gcp-sa.json
 
+            - name: PG_USER
+              value: "superset"
+
             - name: TARGET_NS
               value: "superset"
 
