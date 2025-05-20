@@ -1,0 +1,22 @@
+{{ if eq .Values.envAlias "prod" }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/instance: ads-prod
+    app.kubernetes.io/name: postgresql-ads
+  name: ads-pg-nodeport
+spec:
+  ports:
+  - name: tcp-postgresql
+    port: 5432
+    protocol: TCP
+    targetPort: tcp-postgresql
+    nodePort: 35432
+  selector:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: ads-prod
+    app.kubernetes.io/name: postgresql-ads
+  type: NodePort
+{{- end -}}
