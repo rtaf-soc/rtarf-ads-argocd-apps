@@ -1,0 +1,22 @@
+{{ if eq .Values.envAlias "prod" }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/instance: ads-prod
+    app.kubernetes.io/name: redis
+  name: redis-nodeport
+spec:
+  ports:
+  - name: tcp-redis
+    port: 6379
+    protocol: TCP
+    targetPort: redis
+    nodePort: 32379
+  selector:
+    app.kubernetes.io/component: master
+    app.kubernetes.io/instance: ads-prod
+    app.kubernetes.io/name: redis
+  type: NodePort
+{{- end -}}
