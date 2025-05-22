@@ -1,0 +1,54 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: feeds-loader
+spec:
+  # kubectl create job --from=cronjob/feeds-loader feeds-loader-001 -n ads-prod
+  suspend: {{ .Values.feedLoaderSuspend }}
+  schedule: "0 */1 * * *" # Every 1 hours
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          containers:
+          - name: cron-script
+            image: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-jobs:{{ .Values.adsJob.imageTag }}
+            imagePullPolicy: IfNotPresent
+            command:
+            - ruby
+            args:
+            - /scripts/feeds-loader.rb
+            env:
+            - name: PG_HOST
+              value: "postgresql-ads"
+
+            - name: PG_DB
+              value: "ads"
+
+            - name: PG_USER
+              value: "postgres"
+
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ads-postgres-secret
+                  key: adminPasswordKey
+                  optional: false
+
+            - name: GOOGLE_SHEET_KEY1
+              valueFrom:
+                secretKeyRef:
+                  name: ads-api-secret
+                  key: GOOGLE_SHEET_KEY1
+                  optional: false
+
+            volumeMounts:
+            - name: temp-dir
+              mountPath: /data/temp
+
+          restartPolicy: OnFailure
+
+          volumes:
+          - name: temp-dir
+            emptyDir: {}
