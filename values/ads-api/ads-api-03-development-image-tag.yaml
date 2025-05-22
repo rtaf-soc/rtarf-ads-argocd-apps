@@ -2,4 +2,4 @@
 ads-api:
   pods:
     image:
-      tag: "main-c177522"
+      tag: "develop-aac2dee"
