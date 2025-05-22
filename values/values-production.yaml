@@ -7,3 +7,4 @@ theHiveLoaderSuspend: false
 uptimeLoaderSuspend: false
 backupAdsSuspend: false
 backupSupersetSuspend: false
+feedLoaderSuspend: false
