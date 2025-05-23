@@ -1,0 +1,67 @@
+{{ if eq .Values.envAlias "prod" }}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ads-pg-backup-defnex
+spec:
+  # kubectl create job --from=cronjob/ads-pg-backup-defnex ads-pg-backup-defnex-001 -n ads-prod
+  suspend: {{ .Values.backupAdsSuspend }}
+  schedule: "0 */4 * * *" # Every 4 hours
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          serviceAccountName: ads-sa
+          containers:
+          - name: cron-script
+            image: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-jobs:{{ .Values.adsJob.imageTag }}
+            imagePullPolicy: IfNotPresent
+            command:
+            - bash
+            args:
+            - /scripts/backup-postgres-db.bash
+            env:
+            - name: BACKUP_NAME_PREFIX
+              value: "postgres"
+
+            - name: EXCLUDE_FLAG
+              value: "YES"
+
+            - name: EXTENSION
+              value: "defnex-{{ .Values.envAlias }}"
+
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /secrets/gcp-sa.json
+
+            - name: PG_USER
+              value: "postgres"
+
+            - name: TARGET_NS
+              value: "ads-prod"
+
+            - name: TARGET_POD
+              value: "postgresql-ads-0"
+
+            - name: GCS_FOLDER
+              value: "defnex-backup"
+
+            volumeMounts:
+            - name: temp-dir
+              mountPath: /data/temp
+
+            - name: secrets
+              readOnly: true
+              mountPath: "/secrets"
+
+          restartPolicy: OnFailure
+
+          volumes:
+          - name: temp-dir
+            emptyDir: {}
+
+          - name: secrets
+            secret:
+              secretName: gcp-sa
+{{- end -}}
