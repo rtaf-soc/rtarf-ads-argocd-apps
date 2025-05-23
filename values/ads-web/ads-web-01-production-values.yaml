@@ -14,6 +14,9 @@ ads-web:
       - name: HTTP_PORT
         value: "3000"
 
+      - name: NUXT_PUBLIC_MONITORING_WEB_URL
+        value: "https://zabbix.rtarf-prod.its-software-services.com/zabbix/zabbix.php?action=map.view&sysmapid=13&severity_min=4"
+
       - name: NUXT_PUBLIC_GEO_IP_URL
         value: "https://geoip-map.rtarf-prod.its-software-services.com/"
 
