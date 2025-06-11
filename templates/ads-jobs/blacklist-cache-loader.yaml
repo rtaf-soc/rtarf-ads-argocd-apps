@@ -5,6 +5,7 @@ metadata:
 spec:
   # kubectl create job --from=cronjob/blacklist-cache-loader blacklist-loader-001 -n ads-dev
   schedule: "*/20 * * * *" # Every 20 minute
+  suspend: {{ .Values.feedLoaderSuspend }}
   jobTemplate:
     spec:
       ttlSecondsAfterFinished: 3600

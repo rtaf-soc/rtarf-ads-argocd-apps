@@ -53,8 +53,8 @@ ads-web:
         #value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/a5d09b04-0ffc-4738-94ee-89c4a2b27969/?native_filters_key=3jjk9YcZp0JZmoH2wSdJ-nP7lZhCEVtY9-dyZLj41hOyD7nfIRrh2SgRvaGljzqP&standalone=true"
     
       # Dashboard
-      - name: NUXT_PUBLIC_DASHBOARD_URL01 # Zeek Event Summary
-        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/3ac28d3b-ee7e-415f-864e-d5119abbee23/?standalone=true&native_filters_key=DA_GqL-hMbFj0y_bQrEVQGcxeK6zM5LrQXeMRldf41SPqMpEk6QxNSTdsJUUgpB6"
+      - name: NUXT_PUBLIC_DASHBOARD_URL01 # Cambodia focused attack (from Palo)
+        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/8c0941d8-5246-4f32-879e-9419a64a5fa9/?native_filters_key=NiPNeWhyFH83h3heG9P6yiZ1bwxQwaleYusynAIlGoSb6no22CKyyBXreR0LwmnP&standalone=true"
 
       - name: NUXT_PUBLIC_DASHBOARD_URL02 # Blacklist Summary
         value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/3495ae53-a896-45b8-b6c4-22750a08afb4/?native_filters_key=ETnkt852u-mOup1HVeSBexzLlsprSXy2q7_FeKM9639-qIfclHvWMfoOHT7l1cQJ&standalone=true"
