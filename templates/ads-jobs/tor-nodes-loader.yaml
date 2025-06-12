@@ -1,0 +1,45 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: tor-nodes-loader
+spec:
+  # kubectl create job --from=cronjob/tor-nodes-loader oui-loader-001 -n ads-dev
+  schedule: "0 */4 * * *" # Every 4 hours
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          containers:
+          - name: cron-script
+            image: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-jobs:{{ .Values.adsJob.imageTag }}
+            imagePullPolicy: IfNotPresent
+            command:
+            - ruby
+            args:
+            - /scripts/tor-nodes-cache-loader.rb
+            env:
+            - name: REDIS_HOST
+              value: redis-master
+
+            - name: REDIS_PORT
+              value: "6379"
+
+            - name: REDIS_PASSWORD
+              value: "anything-notuse"
+
+            - name: CACHE_TTL_SEC
+              value: "86400" # 1 day
+
+            - name: ORG_ID
+              value: default
+
+            volumeMounts:
+            - name: temp-dir
+              mountPath: /data/temp
+
+          restartPolicy: OnFailure
+
+          volumes:
+          - name: temp-dir
+            emptyDir: {}
