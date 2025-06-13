@@ -5,7 +5,7 @@ metadata:
 spec:
   # kubectl create job --from=cronjob/thehive-cases-loader thehive-cases-loader-001 -n ads-prod
   suspend: {{ .Values.theHiveLoaderSuspend }}
-  schedule: "0 */1 * * *" # Every 1 hours
+  schedule: "*/5 * * * *" # Every 5 minutes
   jobTemplate:
     spec:
       ttlSecondsAfterFinished: 3600
