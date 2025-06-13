@@ -122,3 +122,45 @@ ads-web:
 
       - name: NUXT_PUBLIC_TOOL_URL08 # Prometheus
         value: "https://grafana-k8s.rtarf-prod.its-software-services.com/"
+
+      # MITR
+      - name: NUXT_PUBLIC_MITR_URL01
+        value: "https://napbiotec.io/"
+
+      # Cyber Kill Chain
+      - name: NUXT_PUBLIC_CKC_URL01
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_CKC_URL02
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_CKC_URL03
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_CKC_URL04
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_CKC_URL05
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_CKC_URL06
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_CKC_URL07
+        value: "https://napbiotec.io/"
+
+      # ASEAN Cyber Operations
+      - name: NUXT_PUBLIC_ACO_URL01
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_ACO_URL02
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_ACO_URL03
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_ACO_URL04
+        value: "https://napbiotec.io/"
+
+      - name: NUXT_PUBLIC_ACO_URL05
+        value: "https://napbiotec.io/"
