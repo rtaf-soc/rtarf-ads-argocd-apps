@@ -151,7 +151,7 @@ ads-web:
 
       # ASEAN Cyber Operations
       - name: NUXT_PUBLIC_ACO_URL01 # Cambodia
-        value: "https://superset.rtarf-prod.its-software-services.com/superset/dashboard/8c0941d8-5246-4f32-879e-9419a64a5fa9/?native_filters_key=NiPNeWhyFH83h3heG9P6yiZ1bwxQwaleYusynAIlGoSb6no22CKyyBXreR0LwmnP&standalone=true"
+        value: "https://kibana-soc.rtarf-prod.its-software-services.com/app/r/s/bLTdJ"
 
       - name: NUXT_PUBLIC_ACO_URL02
         value: "https://napbiotec.io/"
