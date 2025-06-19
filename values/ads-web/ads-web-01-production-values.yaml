@@ -162,5 +162,5 @@ ads-web:
       - name: NUXT_PUBLIC_ACO_URL04
         value: "https://napbiotec.io/"
 
-      - name: NUXT_PUBLIC_ACO_URL05
-        value: "https://napbiotec.io/"
+      - name: NUXT_PUBLIC_ACO_URL05 # Vietnam
+        value: "https://kibana-soc.rtarf-prod.its-software-services.com/app/r/s/p7Gfg"
