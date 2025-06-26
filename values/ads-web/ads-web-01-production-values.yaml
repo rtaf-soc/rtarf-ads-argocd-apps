@@ -153,14 +153,20 @@ ads-web:
       - name: NUXT_PUBLIC_ACO_URL01 # Cambodia
         value: "https://kibana-soc.rtarf-prod.its-software-services.com/app/r/s/bLTdJ"
 
-      - name: NUXT_PUBLIC_ACO_URL02
-        value: "https://napbiotec.io/"
+      - name: NUXT_PUBLIC_ACO_URL02 # Myanmar
+        value: "" 
 
-      - name: NUXT_PUBLIC_ACO_URL03
-        value: "https://napbiotec.io/"
+      - name: NUXT_PUBLIC_ACO_URL03 # Malaysia
+        value: "" 
 
-      - name: NUXT_PUBLIC_ACO_URL04
-        value: "https://napbiotec.io/"
+      - name: NUXT_PUBLIC_ACO_URL04 # Laos
+        value: "https://kibana-soc.rtarf-prod.its-software-services.com/app/r/s/FQlL3" 
 
       - name: NUXT_PUBLIC_ACO_URL05 # Vietnam
         value: "https://kibana-soc.rtarf-prod.its-software-services.com/app/r/s/p7Gfg"
+
+      - name: NUXT_PUBLIC_ACO_URL06 # China
+        value: ""
+
+      - name: NUXT_PUBLIC_ACO_URL07 # North Korea
+        value: ""

@@ -161,3 +161,9 @@ ads-web:
 
       - name: NUXT_PUBLIC_ACO_URL05
         value: "https://napbiotec.io/"
+        
+      - name: NUXT_PUBLIC_ACO_URL06 # China
+        value: ""
+
+      - name: NUXT_PUBLIC_ACO_URL07 # North Korea
+        value: ""
