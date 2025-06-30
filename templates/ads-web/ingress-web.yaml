@@ -22,3 +22,13 @@ spec:
             name: ads-{{ .Values.envAlias }}-ads-web
             port:
               number: 80
+  - host: "{{ .Values.domainWebIp }}"
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        path: "/"
+        backend:
+          service:
+            name: ads-{{ .Values.envAlias }}-ads-web
+            port:
+              number: 80
