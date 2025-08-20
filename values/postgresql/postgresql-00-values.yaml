@@ -6,3 +6,8 @@ postgresql-ads:
     existingSecret: ads-postgres-secret
     secretKeys:
       adminPasswordKey: adminPasswordKey
+
+  image:
+    registry: asia-southeast1-docker.pkg.dev
+    repository: its-artifact-commons/utils/postgresql
+    tag: "v16.2.0-1"
