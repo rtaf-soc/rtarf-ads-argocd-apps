@@ -23,6 +23,15 @@ spec:
             - name: HF_HOME
               value: /data/hf
 
+            - name: REDIS_HOST
+              value: redis-master
+
+            - name: REDIS_PORT
+              value: "6379"
+
+            - name: REDIS_PASSWORD
+              value: "anything-notuse"
+
             - name: PG_HOST
               value: "postgresql-ads"
 
