@@ -4,7 +4,7 @@ metadata:
   name: cases-transform
 spec:
   # kubectl create job --from=cronjob/cases-transform cases-transform-001 -n ads-prod
-  suspend: false
+  suspend: {{ .Values.caseTransformerSuspend }}
   schedule: "5 * * * *" # Every นาทีที่ 5 ของทุกๆ ชั่วโมง
   jobTemplate:
     spec:
