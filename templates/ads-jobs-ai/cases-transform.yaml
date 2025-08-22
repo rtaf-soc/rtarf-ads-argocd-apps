@@ -5,7 +5,7 @@ metadata:
 spec:
   # kubectl create job --from=cronjob/cases-transform cases-transform-001 -n ads-prod
   suspend: false
-  schedule: "*/15 * * * *" # Every 15 minutes
+  schedule: "5 * * * *" # Every นาทีที่ 5 ของทุกๆ ชั่วโมง
   jobTemplate:
     spec:
       ttlSecondsAfterFinished: 3600
@@ -35,6 +35,9 @@ spec:
                   name: ads-postgres-secret
                   key: adminPasswordKey
                   optional: false
+
+            - name: START_CASE_NO
+              value: "1"
 
             volumeMounts:
             - name: temp-dir
