@@ -1,0 +1,47 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cases-transform
+spec:
+  # kubectl create job --from=cronjob/cases-transform cases-transform-001 -n ads-prod
+  suspend: false
+  schedule: "*/15 * * * *" # Every 15 minutes
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          containers:
+          - name: cron-script
+            image: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-ai-jobs:{{ .Values.adsJobAI.imageTag }}
+            imagePullPolicy: IfNotPresent
+            command:
+            - python
+            args:
+            - /scripts/cases-transformer.py
+            env:
+            - name: PG_HOST
+              value: "postgresql-ads"
+
+            - name: PG_DB
+              value: "ads"
+
+            - name: PG_USER
+              value: "postgres"
+
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ads-postgres-secret
+                  key: adminPasswordKey
+                  optional: false
+
+            volumeMounts:
+            - name: temp-dir
+              mountPath: /data/temp
+
+          restartPolicy: OnFailure
+
+          volumes:
+          - name: temp-dir
+            emptyDir: {}
