@@ -9,3 +9,4 @@ uptimeLoaderSuspend: false
 backupAdsSuspend: false
 backupSupersetSuspend: false
 feedLoaderSuspend: false
+caseTransformerSuspend: false
