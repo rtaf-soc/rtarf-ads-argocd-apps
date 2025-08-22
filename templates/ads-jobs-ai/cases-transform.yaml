@@ -20,8 +20,8 @@ spec:
             args:
             - /scripts/cases-transformer.py
             env:
-            - name: TRANSFORMERS_CACHE
-              value: /data/models
+            - name: HF_HOME
+              value: /data/hf
 
             - name: PG_HOST
               value: "postgresql-ads"
@@ -46,8 +46,8 @@ spec:
             - name: temp-dir
               mountPath: /data/temp
 
-            - name: models
-              mountPath: /data/models
+            - name: hf
+              mountPath: /data/hf
 
           restartPolicy: OnFailure
 
@@ -55,6 +55,6 @@ spec:
           - name: temp-dir
             emptyDir: {}
 
-          - name: models
+          - name: hf
             persistentVolumeClaim:
               claimName: cases-transform-pvc
