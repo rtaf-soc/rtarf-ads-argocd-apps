@@ -42,7 +42,7 @@ ads-web:
             key: IDP_ENDPOINT
 
       - name: NUXT_API_PATH
-        value: "https://api-dev.please-scan.com"
+        value: "https://mrdjs-dev.please-scan.com"
 
       # Commander
       - name: NUXT_PUBLIC_COMMANDER_URL01
