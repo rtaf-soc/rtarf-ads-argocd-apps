@@ -5,3 +5,5 @@ redis:
     enabled: false
     #existingSecret: redis-credential
     #existingSecretPasswordKey: redisPassword
+  image:
+    repository: bitnamilegacy/redis
