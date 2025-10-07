@@ -4,7 +4,7 @@ metadata:
   name: lucene-transform
 spec:
   # kubectl create job --from=cronjob/lucene-transform lucene-transform-001 -n ads-prod
-  suspend: {{ .Values.caseTransformerSuspend }}
+  suspend: false
   schedule: "5 * * * *" # Every นาทีที่ 5 ของทุกๆ ชั่วโมง
   jobTemplate:
     spec:
