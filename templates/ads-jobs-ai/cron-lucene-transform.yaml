@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: lucene-transform
 spec:
-  # kubectl create job --from=cronjob/lucene-transform lucene-transform-001 -n ads-prod
+  # kubectl create job --from=cronjob/lucene-transform lucene-transform-001 -n ads-dev
   suspend: false
   schedule: "5 * * * *" # Every นาทีที่ 5 ของทุกๆ ชั่วโมง
   jobTemplate:
@@ -21,7 +21,7 @@ spec:
             - /scripts/sigma-transformer.py
             env:
             - name: SIGMA_RULE_CFG_DIR
-              value: /scripts/sigma-rule-configs
+              value: /scripts
 
             - name: REDIS_HOST
               value: redis-master
