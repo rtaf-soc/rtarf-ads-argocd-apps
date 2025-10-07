@@ -1,0 +1,63 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: lucene-transform
+spec:
+  # kubectl create job --from=cronjob/lucene-transform lucene-transform-001 -n ads-prod
+  suspend: {{ .Values.caseTransformerSuspend }}
+  schedule: "5 * * * *" # Every นาทีที่ 5 ของทุกๆ ชั่วโมง
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          containers:
+          - name: cron-script
+            image: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-ai-jobs:{{ .Values.adsJobAI.imageTag }}
+            imagePullPolicy: IfNotPresent
+            command:
+            - python
+            args:
+            - /scripts/sigma-transformer.py
+            env:
+            - name: SIGMA_RULE_CFG_DIR
+              value: ../sigma-rule-configs
+
+            - name: REDIS_HOST
+              value: redis-master
+
+            - name: REDIS_PORT
+              value: "6379"
+
+            - name: REDIS_PASSWORD
+              value: "anything-notuse"
+
+            - name: PG_HOST
+              value: "postgresql-ads"
+
+            - name: PG_DB
+              value: "ads"
+
+            - name: PG_USER
+              value: "postgres"
+
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ads-postgres-secret
+                  key: adminPasswordKey
+                  optional: false
+
+            - name: TMP_DIR
+              value: "/data/temp"
+
+            volumeMounts:
+            - name: temp-dir
+              mountPath: /data/temp
+
+          restartPolicy: OnFailure
+
+          volumes:
+          - name: temp-dir
+            emptyDir: {}
+
