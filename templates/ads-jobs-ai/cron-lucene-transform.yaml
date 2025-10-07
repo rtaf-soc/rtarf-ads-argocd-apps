@@ -21,7 +21,7 @@ spec:
             - /scripts/sigma-transformer.py
             env:
             - name: SIGMA_RULE_CFG_DIR
-              value: ../sigma-rule-configs
+              value: /scripts/sigma-rule-configs
 
             - name: REDIS_HOST
               value: redis-master
