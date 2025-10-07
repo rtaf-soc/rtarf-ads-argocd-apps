@@ -4,7 +4,7 @@ metadata:
   name: lucene-transform
 spec:
   # kubectl create job --from=cronjob/lucene-transform lucene-transform-001 -n ads-prod
-  suspend: {{ .Values.caseTransformerSuspend }}
+  suspend: false
   schedule: "5 * * * *" # Every นาทีที่ 5 ของทุกๆ ชั่วโมง
   jobTemplate:
     spec:
@@ -21,7 +21,7 @@ spec:
             - /scripts/sigma-transformer.py
             env:
             - name: SIGMA_RULE_CFG_DIR
-              value: ../sigma-rule-configs
+              value: /scripts/sigma-rule-configs
 
             - name: REDIS_HOST
               value: redis-master
