@@ -2,4 +2,4 @@
 ads-api:
   pods:
     image:
-      tag: "develop-e2adf86"
+      tag: "main-eaba359"
