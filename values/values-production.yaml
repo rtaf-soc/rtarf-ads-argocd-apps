@@ -2,6 +2,7 @@
 envAlias: prod
 domainAPI: ads-api.rtarf-prod.its-software-services.com
 domainWeb: mrdjs.rtarf-prod.its-software-services.com
+domainWebAnalytic: ads-analytic.rtarf-prod.its-software-services.com
 domainWebIp: 10.141.98.40
 domainBn: bn.rtarf-prod.its-software-services.com
 theHiveLoaderSuspend: false

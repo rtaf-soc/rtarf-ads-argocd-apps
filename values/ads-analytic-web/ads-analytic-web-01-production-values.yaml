@@ -1,0 +1,21 @@
+ads-analytic-web:
+  pods:
+    replicas: 1
+
+    resources:
+      limits:
+        cpu: 300m
+        memory: 350Mi
+      requests:
+        cpu: 150m
+        memory: 100Mi
+
+    env:
+      - name: HTTP_PORT
+        value: "80"
+
+      - name: API_PATH
+        value: "https://ads-api.rtarf-prod.its-software-services.com"
+
+      - name: API_KEY
+        value: "will move this to secret"

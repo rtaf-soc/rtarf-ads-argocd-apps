@@ -30,6 +30,13 @@ dependencies:
     repository: "https://charts.visonneau.fr/"
     version: "0.0.14"
   
+  ### ads-analytic-web ###
+  - name: "generic-app"
+    alias: ads-analytic-web
+    condition: ads-analytic-web.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
+
   ### ads-bn ###
   - name: "generic-app"
     alias: ads-bn
