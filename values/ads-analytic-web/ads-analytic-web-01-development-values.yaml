@@ -19,3 +19,9 @@ ads-analytic-web:
 
       - name: API_KEY
         value: "will move this to secret"
+
+      - name: API_AUTHEN_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: ads-api-secret
+            key: API_AUTHEN_PASSWORD
