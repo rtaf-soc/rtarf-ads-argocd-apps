@@ -2,6 +2,7 @@
 envAlias: dev
 domainAPI: defnex-api.please-scan.com
 domainWeb: defnex.please-scan.com
+domainWebAnalytic: defnex-analytic.please-scan.com
 domainWebIp: mrdjs.rtarf-prod.its-software-services.com
 domainBn: bn-dev.please-scan.com
 theHiveLoaderSuspend: true
