@@ -17,11 +17,17 @@ ads-analytic-web:
       - name: API_PATH
         value: "https://defnex-api.please-scan.com"
 
-      - name: API_KEY
-        value: "will move this to secret"
-
       - name: API_AUTHEN_PASSWORD
         valueFrom:
           secretKeyRef:
             name: ads-api-secret
             key: API_AUTHEN_PASSWORD
+
+      - name: ES_URL
+        value: "http://es-host.dummy.comxx"
+
+      - name: ES_USER
+        value: "es-dummy-user-notuse"
+
+      - name: ES_PASS
+        value: "es-dummy-password-notuse"
