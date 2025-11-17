@@ -22,3 +22,15 @@ ads-analytic-web:
           secretKeyRef:
             name: ads-api-secret
             key: API_AUTHEN_PASSWORD
+
+      - name: ES_URL
+        value: "http://es-host.dummy.comxx"
+
+      - name: ES_USER
+        value: "es-dummy-user-notuse"
+
+      - name: ES_PASS
+        value: "es-dummy-password-notuse"
+
+      - name: DATABASE_URL
+        value: "postgresql://postgres:notuse@xxxxx:5432/notused"
