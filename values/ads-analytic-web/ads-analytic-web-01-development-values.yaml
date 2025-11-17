@@ -22,12 +22,3 @@ ads-analytic-web:
           secretKeyRef:
             name: ads-api-secret
             key: API_AUTHEN_PASSWORD
-
-      - name: ES_URL
-        value: "https://localhost:9200"
-
-      - name: ES_USER
-        value: "es-dummy-user-notuse"
-
-      - name: ES_PASS
-        value: "es-dummy-password-notuse"
