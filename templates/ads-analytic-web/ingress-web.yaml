@@ -21,7 +21,7 @@ spec:
           service:
             name: ads-{{ .Values.envAlias }}-ads-analytic-web
             port:
-              number: 80
+              number: 5173
   - http:
       paths:
       - pathType: Prefix
@@ -30,4 +30,4 @@ spec:
           service:
             name: ads-{{ .Values.envAlias }}-ads-analytic-web
             port:
-              number: 80
+              number: 5173
