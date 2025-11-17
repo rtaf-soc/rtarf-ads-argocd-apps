@@ -4,11 +4,11 @@ ads-analytic-web:
 
     resources:
       limits:
-        cpu: 300m
-        memory: 350Mi
+        cpu: 200m
+        memory: 512Mi
       requests:
         cpu: 150m
-        memory: 100Mi
+        memory: 256Mi
 
     env:
       - name: HTTP_PORT
