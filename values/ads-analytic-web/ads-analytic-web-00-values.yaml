@@ -21,9 +21,9 @@ ads-analytic-web:
       - port: 5173
         targetPort: 5173
         protocol: TCP
-        name: http
+        name: http-web
 
       - port: 8000
         targetPort: 8000
         protocol: TCP
-        name: http
+        name: http-api
