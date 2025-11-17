@@ -24,7 +24,7 @@ ads-analytic-web:
             key: API_AUTHEN_PASSWORD
 
       - name: ES_URL
-        value: "http://es-host.dummy.comxx"
+        value: "https://localhost:9200"
 
       - name: ES_USER
         value: "es-dummy-user-notuse"
