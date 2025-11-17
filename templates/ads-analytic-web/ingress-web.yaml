@@ -22,12 +22,3 @@ spec:
             name: ads-{{ .Values.envAlias }}-ads-analytic-web
             port:
               number: 5173
-  - http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: ads-{{ .Values.envAlias }}-ads-analytic-web
-            port:
-              number: 5173
