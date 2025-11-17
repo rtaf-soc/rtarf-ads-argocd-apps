@@ -23,8 +23,10 @@ spec:
             name: ads-{{ .Values.envAlias }}-ads-analytic-web
             port:
               number: 5173
-
-      # ตรงนี้จะเป็น Python ทำหน้าที่เป็น server side API
+  - host: "{{ .Values.domainWebAnalytic }}"
+    http:
+      paths:
+      # ตรงนี้คือ Vite 
       - pathType: ImplementationSpecific
         path: "/api"
         backend:
@@ -32,3 +34,4 @@ spec:
             name: ads-{{ .Values.envAlias }}-ads-analytic-web
             port:
               number: 8000
+
