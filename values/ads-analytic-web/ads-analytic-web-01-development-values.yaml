@@ -17,9 +17,6 @@ ads-analytic-web:
       - name: API_PATH
         value: "https://defnex-api.please-scan.com"
 
-      - name: API_KEY
-        value: "will move this to secret"
-
       - name: API_AUTHEN_PASSWORD
         valueFrom:
           secretKeyRef:
