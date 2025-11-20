@@ -2,4 +2,4 @@
 ads-analytic-web:
   pods:
     image:
-      tag: "main-c9849ca"
+      tag: "develop-e1555ca"
