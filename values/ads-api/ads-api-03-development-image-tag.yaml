@@ -2,4 +2,4 @@
 ads-api:
   pods:
     image:
-      tag: "develop-7c82238"
+      tag: "main-7ebc436"
