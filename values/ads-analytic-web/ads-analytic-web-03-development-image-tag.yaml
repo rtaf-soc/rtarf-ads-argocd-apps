@@ -2,4 +2,4 @@
 ads-analytic-web:
   pods:
     image:
-      tag: "develop-c75cd02"
+      tag: "develop-fcc6fa1"
