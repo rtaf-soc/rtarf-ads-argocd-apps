@@ -1,0 +1,71 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: suricata-rules-loader
+spec:
+  # kubectl create job --from=cronjob/suricata-rules-loader suricata-rules-loader-001 -n ads-prod
+  suspend: {{ .Values.theHiveLoaderSuspend }}
+  schedule: "0 */1 * * *" # Every 1 hour
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          containers:
+          - name: cron-script
+            image: asia-southeast1-docker.pkg.dev/its-artifact-commons/rtarf/ads-jobs:{{ .Values.adsJob.imageTag }}
+            imagePullPolicy: IfNotPresent
+            command:
+            - ruby
+            args:
+            - /scripts/suricata-rules-loader.rb
+            env:
+            - name: REDIS_HOST
+              value: redis-master
+
+            - name: REDIS_PORT
+              value: "6379"
+
+            - name: REDIS_PASSWORD
+              value: "anything-notuse"
+
+            - name: RULE_URL
+              value: "https://rules.tunableproject.com:46669/suricata/emerging-all.rules.tar.gz"
+
+            - name: RULE_SERVER_USER
+              valueFrom:
+                secretKeyRef:
+                  name: ads-api-secret
+                  key: RULE_SERVER_USER
+
+            - name: RULE_SERVER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ads-api-secret
+                  key: RULE_SERVER_PASSWORD
+
+            - name: PG_HOST
+              value: "postgresql-ads"
+
+            - name: PG_DB
+              value: "ads"
+
+            - name: PG_USER
+              value: "postgres"
+
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ads-postgres-secret
+                  key: adminPasswordKey
+                  optional: false
+
+            volumeMounts:
+            - name: temp-dir
+              mountPath: /data/temp
+
+          restartPolicy: OnFailure
+
+          volumes:
+          - name: temp-dir
+            emptyDir: {}
