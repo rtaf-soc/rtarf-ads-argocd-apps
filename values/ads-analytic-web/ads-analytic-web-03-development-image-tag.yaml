@@ -2,4 +2,4 @@
 ads-analytic-web:
   pods:
     image:
-      tag: "main-4543189"
+      tag: "develop-2019aca"
