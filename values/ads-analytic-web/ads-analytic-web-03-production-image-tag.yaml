@@ -2,4 +2,4 @@
 ads-analytic-web:
   pods:
     image:
-      tag: "v1.0.9"
+      tag: "v2.0.0"
