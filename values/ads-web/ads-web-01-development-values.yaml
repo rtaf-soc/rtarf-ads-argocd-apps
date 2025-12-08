@@ -122,7 +122,7 @@ ads-web:
 
       # MITR
       - name: NUXT_PUBLIC_MITR_URL01
-        value: "https://napbiotec.io/"
+        value: "https://defnex-analytic.please-scan.com/mitre1"
 
       # Cyber Kill Chain
       - name: NUXT_PUBLIC_CKC_URL01
