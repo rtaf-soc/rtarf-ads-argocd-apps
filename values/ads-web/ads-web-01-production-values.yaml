@@ -128,7 +128,7 @@ ads-web:
 
       # Cyber Kill Chain
       - name: NUXT_PUBLIC_CKC_URL01
-        value: "https://napbiotec.io/"
+        value: "https://ads-analytic.rtarf-prod.its-software-services.com/mitre1"
 
       - name: NUXT_PUBLIC_CKC_URL02
         value: "https://napbiotec.io/"
