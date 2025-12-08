@@ -126,7 +126,7 @@ ads-web:
 
       # Cyber Kill Chain
       - name: NUXT_PUBLIC_CKC_URL01
-        value: "https://napbiotec.io/"
+        value: "https://defnex-analytic.please-scan.com/mitre1"
 
       - name: NUXT_PUBLIC_CKC_URL02
         value: "https://napbiotec.io/"
