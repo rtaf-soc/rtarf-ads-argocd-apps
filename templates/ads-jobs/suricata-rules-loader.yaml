@@ -30,7 +30,7 @@ spec:
               value: "anything-notuse"
 
             - name: RULE_URL
-              value: "https://rules.tunableproject.com:46669/suricata/emerging-all.rules.tar.gz"
+              value: "https://rules.tunableproject.com:46669/suricata/emerging-pro-all.rules.tar.gz"
 
             - name: RULE_SERVER_USER
               valueFrom:
