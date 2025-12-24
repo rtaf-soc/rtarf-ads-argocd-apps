@@ -2,4 +2,4 @@
 ads-web:
   pods:
     image:
-      tag: "v0.0.55"
+      tag: "v0.0.56"
