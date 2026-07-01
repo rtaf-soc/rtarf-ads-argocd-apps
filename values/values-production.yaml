@@ -8,6 +8,6 @@ domainBn: bn.rtarf-prod.its-software-services.com
 theHiveLoaderSuspend: false
 uptimeLoaderSuspend: false
 backupAdsSuspend: false
-backupSupersetSuspend: false
+backupSupersetSuspend: true
 feedLoaderSuspend: false
 caseTransformerSuspend: false
