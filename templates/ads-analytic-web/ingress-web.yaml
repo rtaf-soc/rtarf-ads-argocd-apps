@@ -34,4 +34,42 @@ spec:
             name: ads-{{ .Values.envAlias }}-ads-analytic-web
             port:
               number: 8000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ads-analytic-web2-ing
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+    nginx.org/client-max-body-size: 50m
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+      - {{ .Values.domainWebAnalytic2 }}
+      #secretName: ads-analytic-web-cert
+  rules:
+  - host: "{{ .Values.domainWebAnalytic2 }}"
+    http:
+      paths:
+      # ตรงนี้คือ Vite 
+      - pathType: ImplementationSpecific
+        path: "/"
+        backend:
+          service:
+            name: ads-{{ .Values.envAlias }}-ads-analytic-web
+            port:
+              number: 5173
+  - host: "{{ .Values.domainWebAnalytic2 }}"
+    http:
+      paths:
+      # ตรงนี้คือ Vite 
+      - pathType: ImplementationSpecific
+        path: "/api"
+        backend:
+          service:
+            name: ads-{{ .Values.envAlias }}-ads-analytic-web
+            port:
+              number: 8000
+
 
