@@ -4,7 +4,7 @@ domainAPI: ads-api.rtarf-prod.its-software-services.com
 domainWeb: mrdjs.rtarf-prod.its-software-services.com
 domainWeb2: mrdjs2.elk.cyber.rtarf.mi.th
 domainWebAnalytic: ads-analytic.rtarf-prod.its-software-services.com
-domainWebAnalytic2: ads-analytic.cyber.rtarf.mi.th
+domainWebAnalytic2: mainsilo.elk.cyber.rtarf.mi.th
 domainWebIp: 10.141.98.40
 domainBn: bn.rtarf-prod.its-software-services.com
 theHiveLoaderSuspend: false
